@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -7,9 +8,21 @@ export default function Navbar() {
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur border-b border-white/10 z-50">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <h1 className="text-2xl font-semibold italic text-primary">
+        <a
+          href="#home"
+          className="
+    relative inline-block
+    text-2xl text-primary
+    font-bold
+    cursor-pointer
+    transition-transform
+    hover:scale-105
+  "
+          style={{ fontFamily: "'Dancing Script', cursive" }}
+        >
           Md. Altaf
-        </h1>
+          <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary/50"></span>
+        </a>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-6 text-sm text-muted">

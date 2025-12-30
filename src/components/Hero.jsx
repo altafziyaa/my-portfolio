@@ -1,17 +1,27 @@
+import VSCodeMock from "./VSCodeMock";
+
 export default function Hero() {
   return (
     <section
       id="home"
       className="
+        relative
         min-h-screen
-        flex items-center
+        flex items-center justify-center
+        overflow-hidden
         bg-gradient-to-b
         from-white/10
         via-background
         to-background
       "
     >
-      <div className="relative max-w-4xl mx-auto px-6 text-center space-y-6">
+      {/* VS Code Mock as BACKGROUND ELEMENT */}
+      <div className="absolute inset-0 flex items-center justify-center opacity-20 pointer-events-none">
+        <VSCodeMock />
+      </div>
+
+      {/* HERO CONTENT */}
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center space-y-6">
         {/* Soft glow */}
         <div className="absolute inset-0 -z-10 blur-3xl bg-white/10 rounded-full"></div>
 
@@ -37,19 +47,25 @@ export default function Hero() {
             href="/resume.pdf"
             download
             className="
-    inline-flex items-center gap-2
-    px-7 py-3 rounded-xl font-medium
-    border border-primary text-primary
-    hover:bg-primary hover:text-white
-    transition
-  "
+              inline-flex items-center gap-2
+              px-7 py-3 rounded-xl font-medium
+              border border-primary text-primary
+              hover:bg-primary hover:text-white
+              transition
+            "
           >
             Download Resume
           </a>
 
           <a
             href="#contact"
-            className="px-6 py-3 border border-primary rounded-lg hover:bg-primary/10 transition"
+            className="
+              px-6 py-3
+              border border-primary
+              rounded-lg
+              hover:bg-primary/10
+              transition
+            "
           >
             Contact Me
           </a>
