@@ -6,6 +6,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects"; // ✅ added
 import Contact from "./components/Contact";
+import WhatsAppFloat from "./components/WhatsAppFloat";
 
 /* Home Page Component */
 function Home() {
@@ -24,7 +25,7 @@ export default function App() {
   return (
     <Router>
       <Navbar />
-
+      <WhatsAppFloat />
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
