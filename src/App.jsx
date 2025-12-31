@@ -7,6 +7,7 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects"; // ✅ added
 import Contact from "./components/Contact";
 import WhatsAppFloat from "./components/WhatsAppFloat";
+import GoogleForm from "./components/GoogleForm";
 
 /* Home Page Component */
 function Home() {
@@ -16,6 +17,7 @@ function Home() {
       <About />
       <Skills />
       <Projects /> {/* ✅ added */}
+      <GoogleForm />
       <Contact />
     </>
   );

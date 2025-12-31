@@ -50,8 +50,8 @@ export default function Hero() {
               inline-flex items-center gap-2
               px-7 py-3 rounded-xl font-medium
               border border-primary text-primary
-              hover:bg-primary hover:text-white
-              transition
+              hover:bg-primary
+              transition hover:bg-white hover:text-[#09112c]
             "
           >
             Download Resume
@@ -64,7 +64,8 @@ export default function Hero() {
               border border-primary
               rounded-lg
               hover:bg-primary/10
-              transition
+               hover:bg-primary
+              transition hover:bg-white hover:text-[#09112c]
             "
           >
             Contact Me

@@ -1,0 +1,352 @@
+<!-- file: index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Md. Altaf | Full Stack Developer</title>
+
+    <style>
+      :root {
+        --bg-dark: #0f1e33;
+        --bg-light: #f4f6fb;
+        --primary: #2563eb;
+        --text-dark: #0f172a;
+        --text-muted: #64748b;
+        --card-bg: #ffffff;
+        --radius: 14px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", system-ui, sans-serif;
+      }
+
+      body {
+        background: var(--bg-light);
+        color: var(--text-dark);
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* ---------- NAVBAR ---------- */
+      .navbar {
+        background: var(--bg-dark);
+        color: white;
+        padding: 18px 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .nav-left {
+        font-weight: 700;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 28px;
+        align-items: center;
+        font-size: 15px;
+      }
+
+      .btn-outline {
+        border: 1px solid #cbd5f5;
+        padding: 8px 16px;
+        border-radius: 8px;
+        color: white;
+      }
+
+      /* ---------- HERO ---------- */
+      .hero {
+        background: linear-gradient(180deg, #0f1e33 0%, #1c2f4d 100%);
+        color: white;
+        padding: 90px 80px;
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 40px;
+        align-items: center;
+      }
+
+      .hero h1 {
+        font-size: 44px;
+        margin-bottom: 12px;
+      }
+
+      .hero h2 {
+        font-size: 20px;
+        font-weight: 500;
+        opacity: 0.9;
+        margin-bottom: 18px;
+      }
+
+      .hero p {
+        opacity: 0.8;
+        margin-bottom: 26px;
+      }
+
+      .hero-actions {
+        display: flex;
+        gap: 14px;
+      }
+
+      .btn-primary {
+        background: var(--primary);
+        color: white;
+        padding: 12px 22px;
+        border-radius: 10px;
+        font-weight: 600;
+      }
+
+      .btn-secondary {
+        border: 1px solid white;
+        padding: 12px 22px;
+        border-radius: 10px;
+        font-weight: 600;
+      }
+
+      .hero img {
+        width: 100%;
+        border-radius: 16px;
+      }
+
+      /* ---------- SECTION ---------- */
+      section {
+        padding: 80px;
+      }
+
+      .section-title {
+        font-size: 26px;
+        margin-bottom: 30px;
+      }
+
+      /* ---------- CARD ---------- */
+      .card {
+        background: var(--card-bg);
+        border-radius: var(--radius);
+        padding: 26px;
+        box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+      }
+
+      /* ---------- FEATURED ---------- */
+      .featured {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 40px;
+        align-items: center;
+      }
+
+      .badge {
+        display: inline-flex;
+        gap: 8px;
+        margin-top: 14px;
+        color: var(--text-muted);
+        font-size: 14px;
+      }
+
+      .card-actions {
+        margin-top: 20px;
+        display: flex;
+        gap: 14px;
+      }
+
+      /* ---------- ABOUT ---------- */
+      .about {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        gap: 30px;
+        align-items: center;
+      }
+
+      .about img {
+        width: 100%;
+        border-radius: 12px;
+      }
+
+      /* ---------- SKILLS ---------- */
+      .skills {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .skill-card {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-weight: 600;
+      }
+
+      /* ---------- PROJECTS ---------- */
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 26px;
+      }
+
+      .projects img {
+        width: 100%;
+        border-radius: 12px;
+        margin-bottom: 14px;
+      }
+
+      /* ---------- CTA ---------- */
+      .cta {
+        background: var(--bg-dark);
+        color: white;
+        text-align: center;
+        padding: 70px 20px;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+      }
+
+      .footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 13px;
+        color: var(--text-muted);
+      }
+
+      /* ---------- RESPONSIVE ---------- */
+      @media (max-width: 1100px) {
+        .hero,
+        .featured,
+        .about {
+          grid-template-columns: 1fr;
+        }
+
+        .skills,
+        .projects {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 640px) {
+        section,
+        .hero,
+        .navbar {
+          padding: 30px;
+        }
+
+        .skills,
+        .projects {
+          grid-template-columns: 1fr;
+        }
+
+        .hero h1 {
+          font-size: 34px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="nav-left">MD. ALTAF</div>
+      <div class="nav-links">
+        <a href="#">About</a>
+        <a href="#">Projects</a>
+        <a href="#">Skills</a>
+        <a href="#">Contact</a>
+        <a class="btn-outline" href="#">Resume</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+      <div>
+        <h1>Hi, I'm Md. Altaf</h1>
+        <h2>Full Stack Developer</h2>
+        <p>Building Modern Web Applications</p>
+        <div class="hero-actions">
+          <a class="btn-secondary" href="#">View Resume</a>
+          <a class="btn-primary" href="#">Contact Me</a>
+        </div>
+      </div>
+      <img src="hero.png" alt="Developer Illustration" />
+    </header>
+
+    <!-- FEATURED -->
+    <section>
+      <h3 class="section-title">Featured Project</h3>
+      <div class="featured card">
+        <div>
+          <h2>LMS Platform</h2>
+          <p>Learning Management System for online courses.</p>
+          <div class="badge">React • Node.js • MongoDB</div>
+          <div class="card-actions">
+            <a class="btn-primary" href="#">Live Demo</a>
+            <a class="btn-secondary" href="#">Source Code</a>
+          </div>
+        </div>
+        <img src="lms.png" alt="LMS Preview" />
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section>
+      <div class="about card">
+        <img src="profile.jpg" alt="Profile" />
+        <div>
+          <h3>
+            A passionate full-stack developer with expertise in building
+            scalable web applications.
+          </h3>
+          <p class="badge">JavaScript • React • Node.js • Express</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section>
+      <h3 class="section-title">My Skills</h3>
+      <div class="skills">
+        <div class="card skill-card">Frontend Development</div>
+        <div class="card skill-card">Backend APIs</div>
+        <div class="card skill-card">Database Management</div>
+        <div class="card skill-card">UI / UX Design</div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section>
+      <h3 class="section-title">My Projects</h3>
+      <div class="projects">
+        <div class="card">
+          <img src="ecommerce.png" />
+          <h4>E-Commerce App</h4>
+          <a class="btn-primary" href="#">View Project</a>
+        </div>
+        <div class="card">
+          <img src="task.png" />
+          <h4>Task Manager API</h4>
+          <a class="btn-primary" href="#">View Project</a>
+        </div>
+        <div class="card">
+          <img src="portfolio.png" />
+          <h4>Portfolio Website</h4>
+          <a class="btn-primary" href="#">View Project</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta">
+      <h2>Send Me a Message</h2>
+      <p>Have a project or opportunity? Let’s talk about it.</p>
+      <br />
+      <a class="btn-primary" href="#">Open Contact Form</a>
+    </div>
+
+    <footer class="footer">© 2024 Md. Altaf. Built with React & Node.js</footer>
+  </body>
+</html>
